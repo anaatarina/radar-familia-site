@@ -1,1 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radar Família · Novembro e Dezembro 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff7e6;--card:#fff;--ink:#2d2a4a;--mut:#6b6788;--line:#f3e3bf;--acc:#d94452;--ok:#0b6b43;--ok-bg:#d6f5e6;--warn:#8a4b00;--warn-bg:#ffe7b0;--pre:#46507a;--pre-bg:#e6e9f7;--h1:#ffd166;--h2:#ff9ecf;--hink:#2d2a4a;--c-Lisboa:#2563d6;--c-Sintra:#0f8a5f;--c-Oeiras:#7c3fc4;--c-Cascais:#c2610a;--c-Mafra:#c02a86;--c-Amadora:#0a7ea8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1a2e;--card:#272541;--ink:#f4f1ff;--mut:#b9b4dc;--line:#3b3862;--acc:#ff7a85;--ok:#7fe3b4;--ok-bg:#16382b;--warn:#ffd27a;--warn-bg:#4a3810;--pre:#b9c0f5;--pre-bg:#2a2f52;--h1:#5a3a8f;--h2:#a3407b;--hink:#fff;color-scheme:dark;}}
+:root[data-theme="dark"]{--bg:#1b1a2e;--card:#272541;--ink:#f4f1ff;--mut:#b9b4dc;--line:#3b3862;--acc:#ff7a85;--ok:#7fe3b4;--ok-bg:#16382b;--warn:#ffd27a;--warn-bg:#4a3810;--pre:#b9c0f5;--pre-bg:#2a2f52;--h1:#5a3a8f;--h2:#a3407b;--hink:#fff;color-scheme:dark;}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:20px 16px 56px}
+h1,h2,h3{font-family:"Fredoka","Nunito",system-ui,sans-serif}
+h1{font-size:2.2rem;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.e{font-size:1.9em;line-height:1}
+.sub{color:var(--mut);margin:0 0 14px}
+h2{font-size:1.4rem;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.hint{color:var(--mut);font-size:.9rem;margin:0 0 12px}
+section{margin:30px 0 0}
+section.hero{background:linear-gradient(135deg,var(--h1),var(--h2));color:var(--hink);border-radius:28px;padding:18px 14px 10px;margin:18px 0 8px}
+.hero h2{font-size:1.75rem}
+.hero .hint,.hero .skip{color:var(--hink)}
+.hero .card{border-top-color:transparent;border-right-color:transparent;border-bottom-color:transparent}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 4px}
+.chips input{position:absolute;opacity:0;pointer-events:none;width:1px;height:1px}
+.chip{--cc:var(--acc);display:inline-block;border:2px solid var(--cc);background:var(--card);color:var(--ink);padding:8px 16px;border-radius:999px;font-weight:700;font-size:.92rem;cursor:pointer;user-select:none}
+.chips input:checked + .chip{background:var(--cc);color:#fff}
+.chips input:focus-visible + .chip{outline:3px solid var(--ink);outline-offset:2px}
+label[for="f-Lisboa"]{--cc:var(--c-Lisboa)}
+label[for="f-Sintra"]{--cc:var(--c-Sintra)}
+label[for="f-Oeiras"]{--cc:var(--c-Oeiras)}
+label[for="f-Cascais"]{--cc:var(--c-Cascais)}
+label[for="f-Mafra"]{--cc:var(--c-Mafra)}
+label[for="f-Amadora"]{--cc:var(--c-Amadora)}
+body:has(#f-Lisboa:checked) .card[data-c]:not([data-c="Lisboa"]){display:none}
+body:has(#f-Lisboa:checked) section:not(.all):not(:has(.card[data-c="Lisboa"])){display:none}
+body:has(#f-Sintra:checked) .card[data-c]:not([data-c="Sintra"]){display:none}
+body:has(#f-Sintra:checked) section:not(.all):not(:has(.card[data-c="Sintra"])){display:none}
+body:has(#f-Oeiras:checked) .card[data-c]:not([data-c="Oeiras"]){display:none}
+body:has(#f-Oeiras:checked) section:not(.all):not(:has(.card[data-c="Oeiras"])){display:none}
+body:has(#f-Cascais:checked) .card[data-c]:not([data-c="Cascais"]){display:none}
+body:has(#f-Cascais:checked) section:not(.all):not(:has(.card[data-c="Cascais"])){display:none}
+body:has(#f-Mafra:checked) .card[data-c]:not([data-c="Mafra"]){display:none}
+body:has(#f-Mafra:checked) section:not(.all):not(:has(.card[data-c="Mafra"])){display:none}
+body:has(#f-Amadora:checked) .card[data-c]:not([data-c="Amadora"]){display:none}
+body:has(#f-Amadora:checked) section:not(.all):not(:has(.card[data-c="Amadora"])){display:none}
+.card{--cc:var(--acc);background:var(--card);border:2px solid var(--line);border-left:8px solid var(--cc);border-radius:22px;padding:14px 16px;margin:12px 0;box-shadow:0 3px 0 rgba(0,0,0,.06)}
+.card[data-c="Lisboa"]{--cc:var(--c-Lisboa)}
+.card[data-c="Sintra"]{--cc:var(--c-Sintra)}
+.card[data-c="Oeiras"]{--cc:var(--c-Oeiras)}
+.card[data-c="Cascais"]{--cc:var(--c-Cascais)}
+.card[data-c="Mafra"]{--cc:var(--c-Mafra)}
+.card[data-c="Amadora"]{--cc:var(--c-Amadora)}
+.card h3{margin:0 0 6px;font-size:1.12rem;line-height:1.25;display:flex;align-items:center;gap:12px}
+.ico{flex:none;width:56px;height:56px;border-radius:18px;display:grid;place-items:center;font-size:2.1rem;line-height:1;background:var(--line);background:color-mix(in srgb,var(--cc) 16%,var(--card))}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+.tag{font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:999px;background:var(--line);color:var(--ink)}
+.tag.ok{background:var(--ok-bg);color:var(--ok)}
+.tag.warn{background:var(--warn-bg);color:var(--warn)}
+.tag.pre{background:var(--pre-bg);color:var(--pre)}
+.card p{margin:4px 0;font-size:.95rem}
+.when{font-weight:800}
+.book{background:var(--bg);border-left:4px solid var(--acc);padding:8px 12px;border-radius:10px;font-size:.9rem;margin:8px 0}
+a{color:var(--acc);font-weight:700}
+.skip{font-size:.9rem;color:var(--mut)}
+footer{margin-top:32px;color:var(--mut);font-size:.8rem}
+.empty{display:none;font-weight:700}
+body:has(#f-Lisboa:checked) .hero:not(:has(.card[data-c="Lisboa"])) .empty{display:block}
+body:has(#f-Sintra:checked) .hero:not(:has(.card[data-c="Sintra"])) .empty{display:block}
+body:has(#f-Oeiras:checked) .hero:not(:has(.card[data-c="Oeiras"])) .empty{display:block}
+body:has(#f-Cascais:checked) .hero:not(:has(.card[data-c="Cascais"])) .empty{display:block}
+body:has(#f-Mafra:checked) .hero:not(:has(.card[data-c="Mafra"])) .empty{display:block}
+body:has(#f-Amadora:checked) .hero:not(:has(.card[data-c="Amadora"])) .empty{display:block}
+</style>
+</head>
+<body>
+<main>
+<h1><span class="e">🎈</span> Radar Família</h1>
+<p class="sub">Novembro e Dezembro 2026 · para 5 anos · Grande Lisboa</p>
 
+<div class="chips" role="radiogroup" aria-label="Filtrar por concelho">
+  <input type="radio" name="f" id="f-todos" checked><label class="chip" for="f-todos">Todos</label>
+  <input type="radio" name="f" id="f-Lisboa"><label class="chip" for="f-Lisboa">Lisboa</label>
+  <input type="radio" name="f" id="f-Sintra"><label class="chip" for="f-Sintra">Sintra</label>
+  <input type="radio" name="f" id="f-Oeiras"><label class="chip" for="f-Oeiras">Oeiras</label>
+  <input type="radio" name="f" id="f-Cascais"><label class="chip" for="f-Cascais">Cascais</label>
+  <input type="radio" name="f" id="f-Mafra"><label class="chip" for="f-Mafra">Mafra</label>
+  <input type="radio" name="f" id="f-Amadora"><label class="chip" for="f-Amadora">Amadora</label>
+</div>
+
+<section class="hero all">
+<h2><span class="e">🎉</span> Este fim de semana (7 e 8 Nov)</h2>
+<p class="hint">Atualizado a 2 Nov. Confirma sempre no link.</p>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🦁</span><span>Ser Diferente É Normal (Teatro Tivoli BBVA)</span></h3>
+  <p class="when">Sáb 7 Nov às 11:00 (portas às 10:00) · última sessão</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Bilhete pago a partir dos 3 anos</span><span class="tag">Lisboa · Av. da Liberdade</span></div>
+  <p>Musical sobre oito animais que descobrem que as diferenças os tornam especiais. É a última sessão desta série de sábados.</p>
+  <a href="https://www.teatrotivolibbva.pt/ser-diferente-e-normal/" target="_blank" rel="noopener">Ver no Tivoli ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🐛</span><span>Bicholé: uma festa de sons e sensações (Boutique da Cultura, Carnide)</span></h3>
+  <p class="when">De 7 a 21 Nov</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">0 a 5 anos</span><span class="tag warn">Confirmar horas e preços</span><span class="tag">Lisboa · Carnide</span></div>
+  <p>Teatro infantil de sons e sensações. O teu filho tem 5 anos, por isso está no limite da idade.</p>
+  <a href="https://pumpkin.pt/bebes/agenda-bebes/atividades-para-bebes-esta-semana/" target="_blank" rel="noopener">Ver na Pumpkin ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🐙</span><span>Exposições para crianças: Monstros Marinhos (Oceanário) e Museu das Comunicações</span></h3>
+  <p class="when">Em exibição · horários nos sites</p>
+  <div class="row"><span class="tag warn">Confirmar idades e preços</span><span class="tag">Lisboa</span></div>
+  <p>A Pumpkin sugere “Monstros Marinhos” no Oceanário, e “Comunicar é Natural” e o jogo de pistas “Labirinto” no Museu das Comunicações. Confirma a idade recomendada.</p>
+  <a href="https://pumpkin.pt/familia/agenda-familia/recomendacoes-atividades-criancas/atividades-criancas-lisboa-fim-de-semana/" target="_blank" rel="noopener">Ver na Pumpkin ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎨</span><span>ZAF – Zona Artística Familiar (Gulbenkian)</span></h3>
+  <p class="when">Dom 8 Nov e Dom 13 Dez · 10:00–13:00 ou 14:30–17:30</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">5+ anos</span><span class="tag">Grátis*</span><span class="tag">3 h</span><span class="tag">Lisboa · CAM</span></div>
+  <p>Zona de atividades artísticas para famílias no Centro de Arte Moderna. A melhor aposta para a idade do teu filho.</p>
+  <div class="book">⏰ Data de abertura das inscrições: não encontrei. Vê a página e subscreve a newsletter da Gulbenkian. *Preço de 0 € segundo uma agenda de terceiros, confirma no site.</div>
+  <a href="https://gulbenkian.pt/agenda/zaf-zona-artistica-familiar/" target="_blank" rel="noopener">Ver na Gulbenkian ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🌳</span><span>Contar a Floresta (Alcântara)</span></h3>
+  <p class="when">Dom 8 Nov às 10:00 · Dom 20 Dez às 10:00</p>
+  <div class="row"><span class="tag warn">Confirmar idade</span><span class="tag">15 €</span><span class="tag">Inscrição por email</span><span class="tag">Lisboa</span></div>
+  <p>Passeio lento pela vegetação com sessão de contos numa clareira, desenhado para famílias.</p>
+  <div class="book">⏰ Reserva por email: patricia.pereira.contadora@gmail.com. Lugares limitados.</div>
+  <a href="https://www.timeout.pt/lisboa/pt/miudos/contar-a-floresta" target="_blank" rel="noopener">Ver na Time Out ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🌍</span><span>O Estado do Mundo (Quando Acordas) (LU.CA)</span></h3>
+  <p class="when">De 7 a 22 Nov · sessões ao fim de semana à tarde</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade e horas</span><span class="tag">Lisboa · Teatro Luís de Camões</span></div>
+  <p>Espetáculo da Formiga Atómica. Está na BOL e numa agenda de terceiros, mas não vi a idade recomendada.</p>
+  <a href="https://www.bol.pt/Comprar/Bilhetes/181854-o_estado_do_mundo_quando_acordas-lu_ca_teatro_luis_camoes/" target="_blank" rel="noopener">Ver na BOL ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🐯</span><span>Mowgli – O Livro da Selva (TIL)</span></h3>
+  <p class="when">De 24 Out a 30 Mai · Sáb 15:00 · Dom 11:00</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade</span><span class="tag">Desde 12,50 €</span><span class="tag">Lisboa · Teatro Armando Cortez</span></div>
+  <p>Musical do Teatro Infantil de Lisboa, para famílias e público infanto-juvenil. Fica em cena todos os fins de semana até maio, por isso não há pressa: escolhe uma data em Novembro ou Dezembro.</p>
+  <a href="https://www.timeout.pt/lisboa/pt/miudos/mowgli-o-livro-da-selva" target="_blank" rel="noopener">Ver na Time Out ↗</a>
+</div>
+
+<div class="card" data-c="Sintra">
+  <h3><span class="ico">🧙</span><span>O Feiticeiro de Oz (Teatroesfera, Massamá/Monte Abraão)</span></h3>
+  <p class="when">Desde 3 Out · Sáb 16:00 · Dom 11:00</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade e preço</span><span class="tag">Musical para toda a família</span><span class="tag">Sintra · Rua da Cidade Desportiva</span></div>
+  <p>Adaptação musical com texto e encenação de Fernando Gomes e músicas originais. Atenção: há outra produção de “O Feiticeiro de Oz” no Casino Estoril, e essa <strong>não admite menores de 6 anos</strong>, por isso confirma qual é a que estás a comprar.</p>
+  <a href="https://sintranoticias.pt/2026/09/28/o-feiticeiro-de-oz-sobe-ao-palco-do-teatroesfera-em-monte-abraao/" target="_blank" rel="noopener">Ver notícia ↗</a>
+</div>
+
+<div class="card" data-c="Oeiras">
+  <h3><span class="ico">🌰</span><span>Festa de São Martinho (Oeiras, Algés e Barcarena)</span></h3>
+  <p class="when">Sáb 7 Nov (Largo 5 de Outubro, Oeiras) · Dom 8 Nov (Parque Anjos, Algés) · Qua 11 Nov (Fábrica da Pólvora)</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Entrada livre</span><span class="tag">11:00–22:00</span><span class="tag">Oeiras</span></div>
+  <p>Magustos com castanhas assadas e animação, organizados pela Câmara de Oeiras. Não vi atividades pensadas para crianças, por isso confirma o programa de cada dia.</p>
+  <a href="https://noticias-oeiras.pt/2026/10/29/oeiras-celebra-o-magusto-em-tres-locais-do-concelho/" target="_blank" rel="noopener">Ver notícia ↗</a>
+</div>
+
+<div class="card" data-c="Amadora">
+  <h3><span class="ico">🎢</span><span>UBBO Shopping Resort: atrações permanentes</span></h3>
+  <p class="when">Todo o ano · programação de Natal 2026 por anunciar</p>
+  <div class="row"><span class="tag warn">Confirmar horários e preços</span><span class="tag">Amadora</span></div>
+  <p>KidZania Lisboa (cidade das profissões para crianças, bilhetes na BOL e no site), o Escorrega do Draqui (2 pisos) e a UBBOlândia (espaço de brincar). Não encontrei datas de 2026 para a pista de gelo nem para o Pai Natal: anunciam-nas na app UBBO e quase sempre perto do fim de Outubro.</p>
+  <a href="https://www.bol.pt/Comprar/Bilhetes/117025-kidzania_lisboa_familias-kidzania/" target="_blank" rel="noopener">KidZania na BOL ↗</a>
+</div>
+
+<p class="empty">Ainda não encontrei eventos confirmados neste concelho para este fim de semana. Vê as outras secções ou diz-me se conheces algum.</p>
+</section>
+
+<section>
+<h2><span class="e">🔔</span> Reservar já</h2>
+<p class="hint">Coisas que costumam esgotar. Verifica sempre a disponibilidade no link antes de planear.</p>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎨</span><span>ZAF – Zona Artística Familiar (Gulbenkian)</span></h3>
+  <p class="when">Dom 8 Nov e Dom 13 Dez · 10:00–13:00 ou 14:30–17:30</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">5+ anos</span><span class="tag">Grátis*</span><span class="tag">3 h</span><span class="tag">Lisboa · CAM</span></div>
+  <p>Zona de atividades artísticas para famílias no Centro de Arte Moderna. A melhor aposta para a idade do teu filho.</p>
+  <div class="book">⏰ Data de abertura das inscrições: não encontrei. Vê a página e subscreve a newsletter da Gulbenkian. *Preço de 0 € segundo uma agenda de terceiros, confirma no site.</div>
+  <a href="https://gulbenkian.pt/agenda/zaf-zona-artistica-familiar/" target="_blank" rel="noopener">Ver na Gulbenkian ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎪</span><span>Circo de Natal do Coliseu dos Recreios</span></h3>
+  <p class="when">De 6 a 27 Dez</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Desde 20 €</span><span class="tag">Lisboa · Coliseu</span></div>
+  <p>Bilhetes à venda na BOL. Os fins de semana e a semana de Natal costumam ser os primeiros a esgotar.</p>
+  <div class="book">⏰ Já à venda na BOL. Idade mínima recomendada: confirma no bilhete.</div>
+  <a href="https://www.bol.pt/familia" target="_blank" rel="noopener">Ver na BOL ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎈</span><span>Espetáculo de Natal (Hillsong Portugal)</span></h3>
+  <p class="when">19 e 20 Dez · 90 min</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">3+ anos</span><span class="tag">Lisboa</span></div>
+  <p>Produção para toda a família, organizada pela Hillsong Portugal (igreja evangélica), à venda na Ticketline. Fica o aviso para quem preferir saber de antemão.</p>
+  <a href="https://v2.ticketline.pt/events/espectaculo-de-natal-2026" target="_blank" rel="noopener">Ver na Ticketline ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🐶</span><span>Patrulha Pata ao Vivo: Heróis Unidos (MEO Arena)</span></h3>
+  <p class="when">Ter 8 Dez · 10:30 (feriado)</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Desde 26,85 €</span><span class="tag">Bilhete pago a partir dos 3 anos</span><span class="tag">Lisboa · MEO Arena</span></div>
+  <p>Espetáculo musical com Ryder e os cachorros, em que o público ajuda na missão. Até aos 3 anos entram ao colo, e o teu filho de 5 precisa de bilhete.</p>
+  <div class="book">⏰ Bilhetes à venda desde 17 Abr. Confirma a disponibilidade, porque um feriado com este espetáculo costuma esgotar. Vendas: Blueticket, FNAC, Worten, El Corte Inglés e bilheteira da arena.</div>
+  <a href="https://arena.meo.pt/agenda/patrulha-pata-ao-vivo-herois-unidos_pt/16115" target="_blank" rel="noopener">Ver na MEO Arena ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎅</span><span>Natal ao Vivo (Sagres Campo Pequeno)</span></h3>
+  <p class="when">Dom 6 Dez · portas 10:30 · início 11:30</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade e preços</span><span class="tag">Lisboa · Campo Pequeno</span></div>
+  <p>Espetáculo interativo para salvar o Natal, com a Bluey e a Bingo, a Porquinha Peppa e o George e a Ladybug (Miraculous) como convidados. Não vi a classificação etária desta edição. É ótimo para a idade do teu filho.</p>
+  <div class="book">⏰ Bilhetes já à venda em everythingisnew.pt e na Ticketline. É um domingo de manhã em Dezembro, por isso reserva cedo.</div>
+  <a href="https://www.ticketline.pt/pt/evento/natal-ao-vivo-107244" target="_blank" rel="noopener">Ver na Ticketline ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎈</span><span>Music Circus Show On Ice, com momentos de Frozen (Sagres Campo Pequeno)</span></h3>
+  <p class="when">Sáb 14 Nov</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar hora, idade e preços</span><span class="tag">Lisboa · Campo Pequeno</span></div>
+  <p>Espetáculo no gelo para famílias, anunciado na página do Campo Pequeno como “The Nutcracker Ice Show”. É provavelmente o “Quebra-Nozes no Gelo” que eu tinha retirado por não ter confirmado o ano: só confirmei o dia 14.</p>
+  <a href="https://www.sagrescampopequeno.pt/en/home" target="_blank" rel="noopener">Ver no Campo Pequeno ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">📚</span><span>Festival Penguin Kids (Cinema São Jorge)</span></h3>
+  <p class="when">Dom 22 Nov · 10:00–19:00</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Programa e bilhetes por anunciar</span><span class="tag">1.ª edição</span><span class="tag">Lisboa · Av. da Liberdade</span></div>
+  <p>Mais de vinte atividades inspiradas em livros infantis: oficinas de ciência, escrita, arte e ilustração, horas do conto, visitas aos bastidores do cinema, o filme “Robot Selvagem” e um DJ set da Ana Markl. A peça “O Meu Pé de Laranja Lima” é uma adaptação de um livro mais pesado, por isso confirma a idade antes de a escolheres.</p>
+  <div class="book">⏰ A Time Out (7 Out) dizia que o programa completo e a bilheteira seriam anunciados “em breve”. Verifica se já abriram.</div>
+  <a href="https://www.timeout.pt/lisboa/pt/miudos/festival-penguin-kids" target="_blank" rel="noopener">Ver na Time Out ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🩰</span><span>O Quebra-Nozes (Imperial Heritage Ballet)</span></h3>
+  <p class="when">Dom 22 Nov · Coliseu dos Recreios</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade e hora</span><span class="tag">Lisboa</span></div>
+  <p>Ballet clássico com música de Tchaikovsky, descrito pela produção como acessível a todas as idades. Não vi preços nem a duração, por isso confirma se é adequado para os 5 anos.</p>
+  <a href="https://www.visitportugal.com/en/node/520829" target="_blank" rel="noopener">Ver detalhes ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎭</span><span>Teatro Truta &amp; Meia: “O Grilo do Pai Natal”, “Na Sombra de Drácula”, “Os 3 Moscateiros”</span></h3>
+  <p class="when">Datas e sessões por confirmar</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">3 a 10 anos</span><span class="tag warn">Confirmar datas</span><span class="tag">Lisboa · Carnide e outros</span></div>
+  <p>Três peças infantis da mesma companhia, para a idade do teu filho. A Pumpkin diz que os sites de venda e o desconto vão abrir “em breve”, e a BOL já lista “Na Sombra de Drácula” e “O Tal Natal, Que Tal?” na Boutique da Cultura (Carnide).</p>
+  <div class="book">⏰ Quando as sessões abrirem, os fins de semana de Dezembro costumam esgotar primeiro.</div>
+  <a href="https://pumpkin.pt/familia/agenda-familia/pecas-de-teatro-infantil/" target="_blank" rel="noopener">Ver na Pumpkin ↗</a> ·
+  <a href="https://www.bol.pt/Comprar/Bilhetes/184386-na_sombra_de_dracula-boutique_da_cultura/" target="_blank" rel="noopener">Na Sombra de Drácula (BOL) ↗</a>
+</div>
+</section>
+
+<section>
+<h2><span class="e">🎡</span> Em cartaz durante semanas</h2>
+<p class="hint">Sem pressa: ficam em cena ou em exposição durante várias semanas.</p>
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">👸</span><span>Cinderela – O Musical</span></h3>
+  <p class="when">Em cena desde 17 Out (datas de fim por confirmar)</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">3+ anos</span><span class="tag">Desconto Pumpkin</span><span class="tag">Lisboa · Academia de Santo Amaro</span></div>
+  <p>Musical com Fada Madrinha voadora e abóbora que vira coche. Fica a poucos minutos de Lisboa centro.</p>
+  <a href="https://pumpkin.pt/eventos/cinderela-musical/" target="_blank" rel="noopener">Ver sessões e bilhetes ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🏛️</span><span>Museu de Lisboa em família</span></h3>
+  <p class="when">Atividades ao longo do ano · datas a consultar</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Idades variadas</span><span class="tag">Lisboa</span></div>
+  <p>Mais de 40 atividades: oficinas, jogos de pistas e percursos. Escolhe as adequadas aos 5 anos na programação.</p>
+  <a href="https://pumpkin.pt/eventos/atividades-criancas-museu-de-lisboa-familia/" target="_blank" rel="noopener">Ver programação ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🐾</span><span>Cidade Animal – Outra história de Lisboa (Museu de Lisboa · Palácio Pimenta)</span></h3>
+  <p class="when">De 29 Out a 4 Jun 2027 · ter a dom, 10:00–18:00</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Todas as idades</span><span class="tag">5 € (BOL)</span><span class="tag">Lisboa · Campo Grande</span></div>
+  <p>Exposição sobre os animais de Lisboa ao longo da história. Fica aberta até junho, por isso não há pressa. Boa para um dia de chuva.</p>
+  <a href="https://pumpkin.pt/eventos/exposicao-animais-de-lisboa-outra-historia-da-cidade/" target="_blank" rel="noopener">Ver na Pumpkin ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🧱</span><span>Maior exposição de LEGO da Europa (Cordoaria Nacional)</span></h3>
+  <p class="when">Até 10 Jan 2027 · Belém</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Interior</span><span class="tag">Lisboa</span></div>
+  <p>Mais de 120 maquetes feitas com 15 milhões de peças, mais uma “Fun Zone” para construir livremente. Boa opção para um dia de chuva. Não vi o preço do bilhete.</p>
+  <a href="https://www.timeout.pt/lisboa/pt/miudos/exposicao-lego" target="_blank" rel="noopener">Ver na Time Out ↗</a>
+</div>
+</section>
+
+<section>
+<h2><span class="e">🚫</span> Ficou de fora (6+ anos)</h2>
+<p class="skip">Carrinho das Artes (14 Nov), Orquestrália (7 Nov) e a oficina dos bugalhos são para 6 anos ou mais, por isso não entram para o teu filho.</p>
+</section>
+
+
+<section>
+<h2><span class="e">🎄</span> Natal e feiras ao ar livre</h2>
+<p class="hint">Só incluí o que li numa fonte de 2026. Os restantes eventos de Natal da zona ainda não têm datas confirmadas.</p>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎄</span><span>Mercado de Natal do Rossio</span></h3>
+  <p class="when">De 15 Nov a 22 Dez</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Ao ar livre</span><span class="tag">Lisboa · Baixa</span></div>
+  <p>Mercado com artesanato, gastronomia tradicional e animação no centro histórico. Não vi o horário nem se há atividades próprias para crianças.</p>
+  <a href="https://www.noticiasdecoimbra.pt/ja-pode-comecar-a-sonhar-com-o-natal-estas-vilas-e-mercados-ja-tem-datas-para-2026/" target="_blank" rel="noopener">Ver datas ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🎡</span><span>Wonderland Lisboa (Parque Eduardo VII)</span></h3>
+  <p class="when">Do fim de Novembro a início de Janeiro</p>
+  <div class="row"><span class="tag warn">Datas divergentes</span><span class="tag">Ao ar livre</span><span class="tag">Lisboa</span></div>
+  <p>Roda gigante, pista de gelo, mercadinho e Casa do Pai Natal. As fontes que li dão datas de início diferentes (27, 28 ou 30 de Novembro), por isso espera pelo anúncio oficial.</p>
+</div>
+
+<p class="skip">Sem datas de 2026 confirmadas: Cascais Christmas Village (uma fonte indica 22 Nov, mas outra diz que ainda não está confirmado), Natal em Sintra, Natal em Oeiras (Oeiras Parque), Natal na Vila de Mafra e a iluminação de Natal de Lisboa. Vou deixar de fora os dados de 2025.</p>
+</section>
+
+<section>
+<h2><span class="e">🏙️</span> Amadora e UBBO</h2>
+<p class="hint">Da Amadora BD e de artigos recentes. A agenda da Câmara da Amadora não a consegui ler.</p>
+
+<div class="card" data-c="Amadora">
+  <h3><span class="ico">🎢</span><span>UBBO Shopping Resort: atrações permanentes</span></h3>
+  <p class="when">Todo o ano · programação de Natal 2026 por anunciar</p>
+  <div class="row"><span class="tag warn">Confirmar horários e preços</span><span class="tag">Amadora</span></div>
+  <p>KidZania Lisboa (cidade das profissões para crianças, bilhetes na BOL e no site), o Escorrega do Draqui (2 pisos) e a UBBOlândia (espaço de brincar). Não encontrei datas de 2026 para a pista de gelo nem para o Pai Natal: anunciam-nas na app UBBO e quase sempre perto do fim de Outubro.</p>
+  <a href="https://www.bol.pt/Comprar/Bilhetes/117025-kidzania_lisboa_familias-kidzania/" target="_blank" rel="noopener">KidZania na BOL ↗</a>
+</div>
+
+<div class="card" data-c="Amadora">
+  <h3><span class="ico">🧸</span><span>Ludoteca da Biblioteca Municipal da Amadora</span></h3>
+  <p class="when">Programação regular · divulgada no Facebook da Câmara</p>
+  <div class="row"><span class="tag warn">Sem datas</span><span class="tag">Amadora</span></div>
+  <p>Sala para famílias com livros, jogos e fantoches (na Bedeteca). Não encontrei sessões datadas de 2026.</p>
+</div>
+</section>
+
+<section>
+<h2><span class="e">🎭</span> Salas de espetáculos</h2>
+<p class="hint">Da Ticketline, do Coliseu, do Campo Pequeno, da MEO Arena e de salas pequenas. A idade e as horas confirma-as sempre no link.</p>
+
+<div class="card" data-c="Sintra">
+  <h3><span class="ico">🧙</span><span>O Feiticeiro de Oz (Teatroesfera, Massamá/Monte Abraão)</span></h3>
+  <p class="when">Desde 3 Out · Sáb 16:00 · Dom 11:00</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade e preço</span><span class="tag">Musical para toda a família</span><span class="tag">Sintra · Rua da Cidade Desportiva</span></div>
+  <p>Adaptação musical com texto e encenação de Fernando Gomes e músicas originais. Atenção: há outra produção de “O Feiticeiro de Oz” no Casino Estoril, e essa <strong>não admite menores de 6 anos</strong>, por isso confirma qual é a que estás a comprar.</p>
+  <a href="https://sintranoticias.pt/2026/09/28/o-feiticeiro-de-oz-sobe-ao-palco-do-teatroesfera-em-monte-abraao/" target="_blank" rel="noopener">Ver notícia ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🪆</span><span>À Procura do Ó-Ó Perdido (Casa do Coreto, Carnide)</span></h3>
+  <p class="when">De 5 a 20 Dez · Sáb 16:30 · Dom 11:00 · 45 min</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Para todos</span><span class="tag">Teatro de marionetas</span><span class="tag">Lisboa · Carnide</span></div>
+  <p>Marionetas para famílias. Não vi o preço desta peça. Lugares limitados numa sala pequena.</p>
+  <a href="https://luacheia.pt/BocadeCena/a-procura-do-o-o-perdido/" target="_blank" rel="noopener">Ver detalhes ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🐺</span><span>O Fantástico Sr. Wolk – O Musical (Academia de Santo Amaro)</span></h3>
+  <p class="when">Em cena desde 25 Out</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade e datas</span><span class="tag">Lisboa</span></div>
+  <p>Musical “para toda a família”, dos criadores de Rapunzel e A Princesa da Neve. Com a Cinderela (que já está acima), são as duas peças em cena na Academia de Santo Amaro.</p>
+  <a href="https://pumpkin.pt/eventos/o-fantastico-sr-wolk/" target="_blank" rel="noopener">Ver na Pumpkin ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🍎</span><span>Torajo: Uma Viagem ao Mundo das Frutas (Coliseu dos Recreios)</span></h3>
+  <p class="when">Dom 15 Nov</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar hora, idade e preços</span><span class="tag">Lisboa · Coliseu</span></div>
+  <p>Concerto para crianças, listado na programação oficial do Coliseu na categoria “Família”.</p>
+  <a href="https://coliseulisboa.com/o-coliseu/programacao/page/3/" target="_blank" rel="noopener">Ver no Coliseu ↗</a>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🌍</span><span>O Estado do Mundo (Quando Acordas) (LU.CA)</span></h3>
+  <p class="when">De 7 a 22 Nov · sessões ao fim de semana à tarde</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade e horas</span><span class="tag">Lisboa · Teatro Luís de Camões</span></div>
+  <p>Espetáculo da Formiga Atómica. Está na BOL e numa agenda de terceiros, mas não vi a idade recomendada.</p>
+  <a href="https://www.bol.pt/Comprar/Bilhetes/181854-o_estado_do_mundo_quando_acordas-lu_ca_teatro_luis_camoes/" target="_blank" rel="noopener">Ver na BOL ↗</a>
+</div>
+
+<div class="card" data-c="Cascais">
+  <h3><span class="ico">🦁</span><span>Ser Diferente É Normal (Teatro Gil Vicente, Cascais)</span></h3>
+  <p class="when">Em cena desde 10 Out · datas em Cascais por confirmar</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">3+ anos</span><span class="tag warn">Confirmar datas</span><span class="tag">Cascais</span></div>
+  <p>Musical sobre oito animais que descobrem que o que os torna diferentes é o que os torna especiais. Também está no Tivoli, em Lisboa.</p>
+  <a href="https://www.ticketline.pt/en/evento/ser-diferente-e-normal-107703" target="_blank" rel="noopener">Ver na Ticketline ↗</a>
+</div>
+
+<div class="card" data-c="Oeiras">
+  <h3><span class="ico">💚</span><span>Shrek, O Musical (Auditório do Taguspark)</span></h3>
+  <p class="when">De 10 Out a 31 Jan</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idade, horas e preços</span><span class="tag">Oeiras · Porto Salvo</span></div>
+  <p>Musical infantil no Auditório do Taguspark. Está listado numa agenda de Oeiras, sem idade mínima.</p>
+  <a href="https://aondevamos.pt/oeiras/infantil/" target="_blank" rel="noopener">Ver agenda de Oeiras ↗</a>
+</div>
+
+<div class="card" data-c="Sintra">
+  <h3><span class="ico">🎻</span><span>Conservatório de Música de Sintra (Rio de Mouro)</span></h3>
+  <p class="when">Sem eventos de outono encontrados</p>
+  <div class="row"><span class="tag warn">Sem datas</span><span class="tag">Sintra · Vale Mourão</span></div>
+  <p>Em 2026 fez o concerto para famílias “ABC dos Clássicos” (a partir dos 4 anos, a 18 Abr e 9 Mai) e um Dia Aberto (4 Jul, desde os 12 meses). Não vi datas novas para Outubro a Dezembro. Costuma divulgar concertos de alunos de entrada livre, como os de Ano Novo em Janeiro.</p>
+  <a href="https://www.conservatoriodemusicadesintra.org/atividades-2025-2026.html" target="_blank" rel="noopener">Ver atividades ↗</a>
+</div>
+
+<div class="card" data-c="Sintra">
+  <h3><span class="ico">🎧</span><span>DJ Riscas: O Espetáculo ao Vivo (Centro Cultural Olga Cadaval)</span></h3>
+  <p class="when">Digressão · datas em Sintra por confirmar</p>
+  <div class="row"><span class="tag warn">Confirmar datas</span><span class="tag">Sintra</span></div>
+  <p>Aparece na Ticketline com o Olga Cadaval entre as salas da digressão. Não vi a data de Sintra.</p>
+  <a href="https://www.ticketline.pt/en/evento/dj-riscas-o-espectaculo-ao-vivo-103729" target="_blank" rel="noopener">Ver na Ticketline ↗</a>
+</div>
+
+<p class="skip">Fica de fora: “O Feiticeiro de Oz” no Casino Estoril (não admite menores de 6 anos). Sem confirmar: Ballet de Kiev “Quebra-Nozes” (Tivoli, 6 Dez) e “Panda e os Caricas” (Campo Pequeno). Não consegui ler: Taguspark, Olga Cadaval, Casa de Teatro de Sintra, Cineteatro D. João V e o programa em PDF do Auditório de Mafra.</p>
+</section>
+
+<section class="all">
+<h2><span class="e">🎬</span> Cinema</h2>
+<p class="hint">Sessões e horários: vê no site do cinema mais perto (Alegro Sintra, Forum Sintra, Colombo…). A classificação etária confirma-a antes de comprar.</p>
+
+<div class="card">
+  <h3><span class="ico">🎬</span><span>O Gato do Chapéu (Dr. Seuss)</span></h3>
+  <p class="when">Estreia 5 Nov · 91 min</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Português · 3D</span><span class="tag warn">Confirmar idade</span></div>
+  <p>Animação baseada no livro do Dr. Seuss. A BOL já tem sessões em português e 3D numa sala (o resto do país depende de cada cinema).</p>
+  <a href="https://estrelaseouricos.sapo.pt/atividade/estreias-os-filmes-infantis-mais-aguardados-do-ano/" target="_blank" rel="noopener">Ver estreias ↗</a>
+</div>
+
+<div class="card">
+  <h3><span class="ico">🍿</span><span>Em cartaz e a estrear</span></h3>
+  <div class="row"><span class="tag warn">Confirmar sessões</span></div>
+  <p>Segundo a Estrelas &amp; Ouriços: <strong>Toy Story 5</strong> e <strong>Vaiana</strong> (versão com atores) ainda em cartaz, e <strong>A Ovelha Choné: Trapalhada na Quinta</strong> (tema Halloween, sem data certa). Está previsto mais um filme de animação para finais de Novembro (“Hexe – O Reino da Magia”), mas não confirmei a data em Portugal.</p>
+  <a href="https://estrelaseouricos.sapo.pt/ver/cinema/" target="_blank" rel="noopener">Cinema infantil (filtra por idade) ↗</a>
+</div>
+</section>
+
+<section>
+<h2><span class="e">🏛️</span> Mafra (agenda da Câmara)</h2>
+<p class="hint">Da agenda oficial de outubro da Câmara de Mafra. As bibliotecas municipais fazem sessões gratuitas para famílias, mas com inscrição prévia obrigatória, por isso esgotam.</p>
+
+<div class="card" data-c="Mafra">
+  <h3><span class="ico">😊</span><span>Ateliers da Felicidade: “Janelas com alma”</span></h3>
+  <p class="when">Sáb 21 Nov</p>
+  <div class="row"><span class="tag warn">Confirmar detalhes</span><span class="tag">Workshop pais e filhos</span><span class="tag">Mafra</span></div>
+  <p>Workshop para pais e filhos da Câmara de Mafra. Só vi o título e a data no menu do site, sem hora, local, idade nem preço.</p>
+  <div class="book">⏰ Tem página de inscrições no site da Câmara: vê a abertura cedo.</div>
+  <a href="https://www.cm-mafra.pt/pages/3042" target="_blank" rel="noopener">Ver detalhes ↗</a>
+</div>
+
+<p class="skip">Em Mafra, a maior parte do que há para os 5 anos são sessões nas bibliotecas (Mafra, Malveira, Venda do Pinheiro, Ericeira), com inscrição por email (biblioteca.atividades@cm-mafra.pt) ou telefone. As de outubro para esta idade já passaram (3, 10, 17 e 18 Out). A agenda de novembro só sai perto do fim do mês, e o programa do Auditório Beatriz Costa de outubro a dezembro está num PDF de imagem que não consegui ler: <a href="https://www.cm-mafra.pt/pages/4069" target="_blank" rel="noopener">abre aqui</a>.</p>
+</section>
+
+<section>
+<h2><span class="e">🏰</span> Sintra (Parques de Sintra)</h2>
+<p class="hint">Do programa de atividades em família dos Parques de Sintra (3 a 12 anos, com monitores). Os bilhetes compram-se na bilheteira online e as sessões só se realizam com um número mínimo de participantes.</p>
+
+<div class="card" data-c="Sintra">
+  <h3><span class="ico">👑</span><span>O Diário da Princesa (Palácio de Queluz)</span></h3>
+  <p class="when">Datas de outono por confirmar · 1h30 · 15:00</p>
+  <div class="row"><span class="tag warn">Confirmar datas</span><span class="tag">5 a 10 anos</span><span class="tag">10 € por participante</span><span class="tag">Queluz</span></div>
+  <p>Jogo de pistas pelo palácio a partir do diário de uma jovem princesa do século XVIII, com desafios e uma surpresa no fim. É mesmo para a idade do teu filho, mas as únicas datas que vi na página eram de março e abril, por isso confirma na bilheteira se há novas sessões.</p>
+  <div class="book">⏰ Sessões calendarizadas e com bilhete: subscreve a newsletter (opção “Crianças”) para saberes quando abrem novas datas. Necessário pelo menos 1 adulto.</div>
+  <a href="https://www.parquesdesintra.pt/pt/programacao/o-diario-da-princesa/" target="_blank" rel="noopener">Ver atividade ↗</a>
+</div>
+
+<div class="card" data-c="Sintra">
+  <h3><span class="ico">🐴</span><span>Outras atividades em família (Pena, Escola de Arte Equestre)</span></h3>
+  <p class="when">Programa permanente · datas por atividade</p>
+  <div class="row"><span class="tag warn">Confirmar detalhes</span><span class="tag">3 a 12 anos</span><span class="tag">Sintra</span></div>
+  <p>Passeios de pónei e de charrete, Manhãs da Arte Equestre e “Caça ao Tesouro no Parque da Pena” aparecem no programa, mas não li as páginas individuais (idades mínimas e datas).</p>
+  <a href="https://www.parquesdesintra.pt/pt/feito-para-si/atividades-em-familia/" target="_blank" rel="noopener">Ver o programa completo ↗</a>
+</div>
+
+<p class="skip">Fica de fora: “O Tesouro do Rei” (Palácio Nacional de Sintra), que é para 6+ anos.</p>
+</section>
+
+<section>
+<h2><span class="e">🌊</span> Cascais (Cascais 360º)</h2>
+<p class="hint">Da agenda oficial Cascais 360º. A lista mostra só títulos: as datas, horas e idades estão em cada página, que não consegui abrir. Por isso nada abaixo está confirmado para os 5 anos.</p>
+
+<div class="card" data-c="Cascais">
+  <h3><span class="ico">🏛️</span><span>Atividades em museus e na Quinta do Pisão</span></h3>
+  <p class="when">Programa recorrente · datas por atividade</p>
+  <div class="row"><span class="tag warn">Confirmar tudo</span><span class="tag">Cascais</span></div>
+  <p>Têm ar de serem para crianças pequenas: visita-ateliê “Construção de Pau de Chuva” (Museu da Música Portuguesa), “Aventura arqueológica no Museu da Vila”, “Familiofones”, “Mini Hortelão”, “Bingo da Natureza”, “Peddy Paper – Edição Júnior” e “A Jogatana: jogos e brincadeiras em família”. Não sei as idades.</p>
+  <a href="https://360.cascais.pt/pt/agenda/visita-atelier-construcao-de-pau-de-chuva-no-museu-da-musica-portuguesa-casa-verdades-de" target="_blank" rel="noopener">Pau de Chuva ↗</a> ·
+  <a href="https://360.cascais.pt/pt/agenda/jogatana-jogos-e-brincadeiras-em-familia" target="_blank" rel="noopener">A Jogatana ↗</a> ·
+  <a href="https://360.cascais.pt/pt/agenda" target="_blank" rel="noopener">Agenda completa ↗</a>
+</div>
+</section>
+
+<section>
+<h2><span class="e">🌳</span> Oeiras</h2>
+<div class="card" data-c="Oeiras">
+  <h3><span class="ico">📅</span><span>Agenda da Câmara de Oeiras</span></h3>
+  <div class="row"><span class="tag warn">Não consegui ler</span><span class="tag">Oeiras</span></div>
+  <p>O site da Câmara não deixa acesso automático, por isso não tenho eventos de Oeiras. Abre o link ou filtra “Oeiras &amp; Cascais” na Pumpkin.</p>
+  <a href="https://www.oeiras.pt/agenda" target="_blank" rel="noopener">Agenda de Oeiras ↗</a>
+</div>
+</section>
+
+<section>
+<h2><span class="e">🏭</span> Fábrica da Pólvora de Barcarena (Oeiras)</h2>
+<p class="hint">Só encontrei estes três para Novembro e Dezembro. A “Fábrica Assombrada” (30 Out a 1 Nov) era um festival de terror para adultos.</p>
+<div class="card" data-c="Oeiras">
+  <h3><span class="ico">🌰</span><span>Festa de São Martinho (Oeiras, Algés e Barcarena)</span></h3>
+  <p class="when">Sáb 7 Nov (Largo 5 de Outubro, Oeiras) · Dom 8 Nov (Parque Anjos, Algés) · Qua 11 Nov (Fábrica da Pólvora)</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag">Entrada livre</span><span class="tag">11:00–22:00</span><span class="tag">Oeiras</span></div>
+  <p>Magustos com castanhas assadas e animação, organizados pela Câmara de Oeiras. Não vi atividades pensadas para crianças, por isso confirma o programa de cada dia.</p>
+  <a href="https://noticias-oeiras.pt/2026/10/29/oeiras-celebra-o-magusto-em-tres-locais-do-concelho/" target="_blank" rel="noopener">Ver notícia ↗</a>
+</div>
+
+<div class="card" data-c="Oeiras">
+  <h3><span class="ico">🏃</span><span>Oeiras Trail com Trail Kids (Fábrica da Pólvora)</span></h3>
+  <p class="when">Dom 22 Nov · partida às 09:00</p>
+  <div class="row"><span class="tag ok">Confirmado 2026</span><span class="tag warn">Confirmar idades e preço do Trail Kids</span><span class="tag">Oeiras · Barcarena</span></div>
+  <p>Prova de corrida e caminhada com partida e chegada na Fábrica da Pólvora, e uma prova “Trail Kids” para crianças. Os adultos pagam 13 a 18 €. É um evento familiar para assistir ou participar.</p>
+  <a href="https://racefinder.pt/event/7o-consilcar-oeiras-trail/" target="_blank" rel="noopener">Ver detalhes ↗</a>
+</div>
+
+<div class="card" data-c="Oeiras">
+  <h3><span class="ico">🏭</span><span>Jardins, parque infantil e visita livre (Fábrica da Pólvora)</span></h3>
+  <p class="when">Sempre aberto · horário por confirmar</p>
+  <div class="row"><span class="tag warn">Confirmar horário</span><span class="tag">Ao ar livre</span><span class="tag">Oeiras · Barcarena</span></div>
+  <p>Antigo complexo industrial com jardins, parque infantil e edifícios para visitar, ideal para um passeio com crianças pequenas. A única fonte de horários que li é antiga (9h às 18h de outubro a abril), por isso confirma antes de ires.</p>
+  <a href="https://estrelaseouricos.sapo.pt/atividade/fabrica-da-polvora/" target="_blank" rel="noopener">Ver ficha ↗</a>
+</div>
+</section>
+
+
+<section>
+<h2><span class="e">🛍️</span> Centros comerciais</h2>
+<p class="hint">Pesquisei as principais da zona (Alegro Sintra, Forum Sintra, Oeiras Parque, CascaiShopping, Alegro Alfragide, Colombo, Vasco da Gama, Dolce Vita Tejo). Em nenhum encontrei programação infantil confirmada para Outubro ou Novembro de 2026: costumam anunciá-la com poucos dias de antecedência.</p>
+
+<div class="card" data-c="Cascais">
+  <h3><span class="ico">🛍️</span><span>CascaiShopping</span></h3>
+  <div class="row"><span class="tag warn">Sem dados</span><span class="tag">Cascais</span></div>
+  <p>Não encontrei eventos nem agenda online. Costuma aparecer o Pai Natal e atividades no Natal: confirma no site do centro.</p>
+</div>
+
+<div class="card" data-c="Lisboa">
+  <h3><span class="ico">🛍️</span><span>Colombo, Vasco da Gama, Forum Sintra, Dolce Vita Tejo e outros</span></h3>
+  <div class="row"><span class="tag warn">Sem dados</span><span class="tag">Lisboa e arredores</span></div>
+  <p>Nenhum tinha programação infantil publicada em páginas que eu conseguisse ler. Muitos centros têm uma página de agenda própria: vale a pena guardar a do mais próximo (por exemplo, Forum Sintra e Alegro Sintra).</p>
+</div>
+</section>
+
+<section class="all">
+<p class="hint">Mais fontes para o fim de semana:</p>
+<p class="skip">
+<a href="https://pumpkin.pt/agenda/" target="_blank" rel="noopener">Agenda Pumpkin</a> (filtra por idade 5 e por zona: Sintra, Oeiras &amp; Cascais, Mafra, Lisboa Centro) ·
+<a href="https://pumpkin.pt/familia/agenda-familia/recomendacoes-atividades-criancas/atividades-criancas-lisboa-fim-de-semana/" target="_blank" rel="noopener">Pumpkin · Lisboa e arredores</a> ·
+<a href="https://pumpkin.pt/eventos-gratuitos/" target="_blank" rel="noopener">Eventos gratuitos</a> ·
+<a href="https://estrelaseouricos.sapo.pt/" target="_blank" rel="noopener">Estrelas &amp; Ouriços</a> (filtra por idade 5 e localidade: Sintra, Rio de Mouro, Mem Martins, Queluz, Oeiras, Cascais, Mafra) ·
+<a href="https://www.timeout.pt/lisboa/pt/miudos/coisas-para-fazer-com-criancas-este-mes-em-lisboa" target="_blank" rel="noopener">Time Out · Miúdos</a> ·
+<a href="https://www.nit.pt/agenda" target="_blank" rel="noopener">NiT · Agenda</a> ·
+<a href="https://www.ticketline.pt/en/" target="_blank" rel="noopener">Ticketline</a> ·
+<a href="https://bilheteira.fnac.pt/" target="_blank" rel="noopener">FNAC</a> ·
+<a href="https://coliseulisboa.com/o-coliseu/programacao/" target="_blank" rel="noopener">Coliseu</a> ·
+<a href="https://www.sagrescampopequeno.pt/en/home" target="_blank" rel="noopener">Campo Pequeno</a> ·
+<a href="https://arena.meo.pt/agenda" target="_blank" rel="noopener">MEO Arena</a> ·
+<a href="https://luacheia.pt/" target="_blank" rel="noopener">Casa do Coreto</a> ·
+<a href="https://www.bol.pt/familia" target="_blank" rel="noopener">BOL · Família</a> ·
+<a href="https://blueticket.meo.pt/pt" target="_blank" rel="noopener">Blueticket</a> ·
+<a href="https://www.timeout.pt/lisboa/pt/miudos/fim-de-semana-perfeito-em-familia" target="_blank" rel="noopener">Time Out · Fim de semana em família</a> ·
+<a href="https://www.oeiras.pt/agenda" target="_blank" rel="noopener">Agenda de Oeiras</a> ·
+<a href="https://360.cascais.pt/pt/agenda" target="_blank" rel="noopener">Cascais 360º</a> ·
+<a href="https://informacao.lisboa.pt/agenda" target="_blank" rel="noopener">Agenda de Lisboa (CML)</a> ·
+<a href="https://www.parquesdesintra.pt/pt/feito-para-si/atividades-em-familia/" target="_blank" rel="noopener">Parques de Sintra</a> ·
+<a href="https://www.viralagenda.com/pt/lisboa/kids" target="_blank" rel="noopener">Viral Agenda · Infantil</a>
+</p>
+</section>
+
+<footer>
+Protótipo atualizado a 2 Nov 2026. Retirei o que era de edições de 2025 ou de ano não confirmado. Não consegui ler: Blueticket, NiT, Câmaras de Oeiras e Lisboa. Baseado em pesquisa na web, e nem todas as fontes são oficiais: confirma sempre datas, idades e preços no link antes de reservar. Nenhum tempo de viagem foi verificado.
+</footer>
+</main>
+</body>
+</html>
